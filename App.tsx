@@ -16,12 +16,12 @@ const Stack = createNativeStackNavigator();
 const firebaseConfig = {
   
   // Remplacez ces valeurs par vos propres identifiants Firebase
-  apiKey: 'YOUR_API_KEY',
-  authDomain: 'YOUR_AUTH_DOMAIN',
-  projectId: 'projetguess',
+  apiKey: 'AIzaSyAILB0Wk3pGwJNIuduRx-EIjxsXH8ob9lc',
+  authDomain: 'com.company.ProjetGuess',
+  projectId: '341736771276',
   storageBucket: 'YOUR_STORAGE_BUCKET',
   messagingSenderId: 'YOUR_MESSAGING_SENDER_ID',
-  appId: 'YOUR_APP_ID'
+  appId: 'projetguess'
 };
 
 // Initialisation de Firebase
