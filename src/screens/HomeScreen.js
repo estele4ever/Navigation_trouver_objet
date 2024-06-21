@@ -1,16 +1,21 @@
 import React from 'react';
-import {View, Text, Button} from 'react-native';
+import { View, Image, ScrollView, TouchableOpacity } from 'react-native';
 
-function HomeScreen({navigation}) {
+export default function HomeScreen({ navigation }) {
+  const navigateToAbout = () => {
+    navigation.navigate('AboutScreen');
+  };
+
   return (
-    <View>
-      <Text>Accueil</Text>
-      <Button
-        title="Aller aux détails"
-        onPress={() => navigation.navigate('Details')}
-      />
-    </View>
+    <ScrollView horizontal={true} pagingEnabled={true}>
+      <TouchableOpacity onPress={navigateToAbout}>
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+          <Image
+            source={require('./image/firstpage.png')}
+            style={{ width: 200, height: 200 }}
+          />
+        </View>
+      </TouchableOpacity>
+    </ScrollView>
   );
 }
-
-export default HomeScreen;

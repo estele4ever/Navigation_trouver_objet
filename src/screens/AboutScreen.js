@@ -1,16 +1,21 @@
 import React from 'react';
-import {View, Text, Button} from 'react-native';
+import { View, Image, ScrollView, TouchableOpacity } from 'react-native';
 
-function AboutScreen({navigation}) {
+export default function AboutScreen({ navigation }) {
+  const navigateToAbout = () => {
+    navigation.navigate('ContactScreen');
+  };
+
   return (
-    <View>
-      <Text>Accueil</Text>
-      <Button
-        title="Aller aux détails"
-        onPress={() => navigation.navigate('Details')}
-      />
-    </View>
+    <ScrollView horizontal={true} pagingEnabled={true}>
+      <TouchableOpacity onPress={navigateToAbout}>
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+          <Image
+            source={require('./image/secondpage.png')}
+            style={{ width: 200, height: 200 }}
+          />
+        </View>
+      </TouchableOpacity>
+    </ScrollView>
   );
 }
-
-export default AboutScreen;
